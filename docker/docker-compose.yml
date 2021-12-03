@@ -15,7 +15,7 @@ services:
     container_name: oop-nginx
     restart: always
     ports:
-      - 8000:80
+      - 8080:80
     volumes:
       - ../:/var/www
       - ./nginx:/etc/nginx/conf.d
