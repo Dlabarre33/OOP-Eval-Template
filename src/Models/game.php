@@ -118,10 +118,10 @@ class Game
 
             $sql = 'INSERT INTO cars (id,title,min_players,max_players) VALUES (:id,:title,:min_players,:max_players)';
             $req = $db->prepare($sql);
-            $req->bindValue(':brand', $id, \PDO::PARAM_INT);
-            $req->bindValue(':color', $title, \PDO::PARAM_STR);
-            $req->bindValue(':year', $min_players, \PDO::PARAM_INT);
-            $req->bindValue(':fuel', $max_players, \PDO::PARAM_STR);
+            $req->bindValue(':id', $id, \PDO::PARAM_INT);
+            $req->bindValue(':title', $title, \PDO::PARAM_STR);
+            $req->bindValue(':min_players', $min_players, \PDO::PARAM_INT);
+            $req->bindValue(':max_players', $max_players, \PDO::PARAM_STR);
 
             return $req->execute();
         } catch (\PDOException $e) {

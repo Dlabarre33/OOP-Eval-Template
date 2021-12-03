@@ -4,6 +4,16 @@
 <h3>Listes des joueurs</h3>
 
 
+
+<ul>
+    <?php
+    while ($players = $resultat->fetch()) {
+        echo "<li>" . $players['nickname'] . "</li>";
+    }
+    ?>
+</ul>
+
+
 <h3>Liste des jeu disponibles</h3>
 
 
